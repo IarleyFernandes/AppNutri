@@ -1,10 +1,20 @@
 <resources>
     <string name="app_name">Nutri</string>
     <string name="app_logo_description">Logo do aplicativo</string>
-    <string name="Texto_de_login">Login</string>
-    <string name="Texto_de_senha">Senha</string>
+    <string name="Texto_de_login">Login:</string>
+    <string name="Texto_de_senha">Senha:</string>
     <string name="Texto_de_botao_entrar">Login</string>
     <string name="Texto_de_botao_cadastrar">Cadastrar</string>
     <string name="Texto_de_botao_esqueci_senha">Esqueci a Senha</string>
-    <string name="Texto_de_logo1">Login</string>
+    <string name="Texto_de_logo1">LOGIN</string>
+    <string name="name">Nome:</string>
+    <string name="senha">Senha:</string>
+    <string name="CPF">CPF:</string>
+    <string name="Email">Email:</string>
+    <string name="Botão_cadastrar">Cadastrar</string>
+    <string name="radio1">Masculino</string>
+    <string name="radio2">Feminino</string>
+    <string name="date">DD/MM/YY:</string>
+    <string name="Logo_cadastro">CADASTRO</string>
+
 </resources>

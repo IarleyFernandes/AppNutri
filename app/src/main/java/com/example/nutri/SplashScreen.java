@@ -17,7 +17,7 @@ private static final int Splash_TIME_OUT = 1000;
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_splash_screen);
 new Handler().postDelayed(() -> {
-    Intent intent = new Intent(SplashScreen.this,MainActivity.class);
+    Intent intent = new Intent(SplashScreen.this,Apresentacao.class);
     startActivity(intent);
     finish();
 }, Splash_TIME_OUT);
