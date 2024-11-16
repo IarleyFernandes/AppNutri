@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/botao_home"
+        android:title="Início" />
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/perfil"
+        android:title="Perfil" />
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/tempo"
+        android:title="Configurações" />
+    <item
+        android:id="@+id/nav_logout"
+        android:icon="@drawable/botao_home_ligado"
+        android:title="Sair"></item>
+</menu>
