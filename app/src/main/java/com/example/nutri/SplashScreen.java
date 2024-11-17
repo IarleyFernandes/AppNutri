@@ -21,6 +21,7 @@ new Handler().postDelayed(() -> {
     startActivity(intent);
     finish();
 }, Splash_TIME_OUT);
+//teste
 
     }
 }

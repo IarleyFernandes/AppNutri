@@ -17,7 +17,7 @@ public class user extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_user);
-
+//teste
     }
     public void user(View view){
         Intent troca_tela = new Intent(this, Apresentacao.class);

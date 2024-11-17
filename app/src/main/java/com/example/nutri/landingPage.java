@@ -34,6 +34,7 @@ public class landingPage extends AppCompatActivity {
         // Configurar o DrawerLayout e o NavigationView
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
+//teste
 
         // Configurar o botão de menu na Toolbar
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(

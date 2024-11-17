@@ -7,6 +7,7 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class cadastro extends AppCompatActivity {
+//teste
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

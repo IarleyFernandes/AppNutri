@@ -21,6 +21,7 @@
     <string name="date">DD/MM/YY:</string>
     <string name="telefone">Telefone:</string>
     <string name="CRM">CRM:</string>
+    <!--  Teste -->
 
     <!--  Tela de apresentaçao e escolha de usuario/admin  -->
     <string name="user">Cliente</string>

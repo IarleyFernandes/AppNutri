@@ -40,6 +40,7 @@ public class MainActivity2 extends AppCompatActivity {
             txtUser.setText("");
             txtSenha.setText("");
         }
+//teste
 
     }
     public void cadastro_admin(View view){
