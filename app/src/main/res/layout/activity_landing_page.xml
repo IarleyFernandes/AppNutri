@@ -7,9 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:background="@color/fundo">
@@ -43,19 +41,22 @@
             android:layout_marginTop="5dp"
             android:layout_marginEnd="100dp"
             android:text="Iarley Borges Fernandes"
+            android:fontFamily="@font/maven_pro"
             android:textSize="30sp" />
 
         <ImageView
             android:layout_width="150dp"
             android:layout_height="190dp"
             android:layout_marginStart="140dp"
-            android:src="@drawable/_951752_1" />
+            android:src="@drawable/_951752_1"
+            android:contentDescription="logo"/>
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginStart="59dp"
     android:layout_marginTop="15dp"
     android:text="@string/CPF"
+    android:fontFamily="@font/maven_pro"
     android:textSize="25sp" />
         <TextView
             android:layout_width="wrap_content"
@@ -70,6 +71,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="140dp"
             android:layout_marginTop="20dp"
+            android:fontFamily="@font/maven_pro"
             android:text="21 anos Masculino"
             android:textSize="18sp" />
 
@@ -79,6 +81,7 @@
             android:layout_marginStart="59dp"
             android:layout_marginTop="20dp"
             android:text="@string/telefone"
+            android:fontFamily="@font/maven_pro"
             android:textSize="25sp" />
 
         <TextView
@@ -87,6 +90,7 @@
             android:layout_marginStart="59dp"
             android:layout_marginTop="10dp"
             android:text="@string/Email"
+            android:fontFamily="@font/maven_pro"
             android:textSize="25sp" />
 
         <RelativeLayout
@@ -105,11 +109,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="-60dp"
                 android:layout_marginEnd="39dp"
-                android:orientation="horizontal"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="160dp"
@@ -117,7 +117,8 @@
                     android:layout_marginStart="25dp"
                     android:layout_marginTop="30dp"
                     android:layout_marginEnd="60dp"
-                    android:src="@drawable/quadrado" />
+                    android:src="@drawable/quadrado"
+                    android:contentDescription="quadrado"/>
 
                 <ImageView
                     android:layout_width="160dp"
@@ -125,7 +126,8 @@
                     android:layout_marginStart="-10dp"
                     android:layout_marginTop="30dp"
                     android:layout_marginEnd="60dp"
-                    android:src="@drawable/quadrado" />
+                    android:src="@drawable/quadrado"
+                    android:contentDescription="quadrado"/>
 
                 <TextView
                     android:layout_width="130dp"
@@ -133,6 +135,7 @@
                     android:layout_marginStart="-425dp"
                     android:layout_marginTop="100dp"
                     android:text="Agenda"
+                    android:fontFamily="@font/maven_pro"
                     android:textSize="20sp" />
 
                 <TextView
@@ -141,6 +144,7 @@
                     android:layout_marginStart="78dp"
                     android:layout_marginTop="100dp"
                     android:text="Relatorios"
+                    android:fontFamily="@font/maven_pro"
                     android:textSize="20sp" />
             </LinearLayout>
         </RelativeLayout>
@@ -186,7 +190,8 @@
             android:layout_height="55dp"
             android:layout_marginStart="330dp"
             android:layout_marginTop="10dp"
-            android:src="@drawable/estrela" />
+            android:src="@drawable/estrela"
+            android:contentDescription=""/>
 
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>

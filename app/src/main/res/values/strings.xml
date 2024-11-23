@@ -21,13 +21,20 @@
     <string name="date">DD/MM/YY:</string>
     <string name="telefone">Telefone:</string>
     <string name="CRM">CRM:</string>
-    <!--  Teste -->
+    <string name="logo_editar_perfil">Editar Infomações</string>
+    <string name="salvar">Salvar</string>
+
 
     <!--  Tela de apresentaçao e escolha de usuario/admin  -->
     <string name="user">Cliente</string>
     <string name="admin">Profissional</string>
 
-
+    <!--Barra lateral-->
     <string name="navigation_drawer_open">Abrir Menu</string>
     <string name="navigation_drawer_close">Fechar Menu</string>
+    <string name="editar_perfil">Editar perfil</string>
+    <string name="recibos">Recibos de Pagamento</string>
+    <string name="notificacoes">Notificações</string>
+    <string name="mudar_senha">Mudar Senha</string>
+    <string name="logout">Sair</string>
 </resources>
