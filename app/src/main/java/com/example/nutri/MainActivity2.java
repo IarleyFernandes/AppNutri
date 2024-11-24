@@ -30,9 +30,9 @@ public class MainActivity2 extends AppCompatActivity {
         String save2 = txtSenha.getText().toString();
         if ((save.equals(usuario)) && save2.equals(senha)) {
             Toast.makeText(this, "Login efetuado com Sucesso", Toast.LENGTH_SHORT).show();
-            Intent troca_tela = new Intent(this,landingPage.class);
-            startActivity(troca_tela);
-            finish();
+//            Intent troca_tela = new Intent(this,landingPage.class);
+//            startActivity(troca_tela);
+//            finish();
 
 
         } else {

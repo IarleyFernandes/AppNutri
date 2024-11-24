@@ -22,12 +22,10 @@ public class Apresentacao extends AppCompatActivity {
     public void entrar(View view){
     Intent troca_tela = new Intent(this,MainActivity.class);
     startActivity(troca_tela);
-    finish();
     }
     public void cadastrar(View view){
         Intent troca_tela = new Intent(this,cadastro.class);
         startActivity(troca_tela);
-        finish();
     }
 }
 
