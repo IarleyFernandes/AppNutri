@@ -33,8 +33,6 @@ public class MainActivity extends AppCompatActivity {
             startActivity(troca_tela);
             finish();
 
-//teste
-
         } else {
             Toast.makeText(this, "Usuario ou senha incorreto", Toast.LENGTH_SHORT).show();
             txtUser.setText("");
@@ -45,5 +43,9 @@ public class MainActivity extends AppCompatActivity {
     public void cadastro(View view){
         Intent troca_tela = new Intent(this,cadastro.class);
         startActivity(troca_tela);
+    }
+    public void esqueci(View view){
+        Intent troca_tela2 = new Intent(this,esqueci_senha.class);
+        startActivity(troca_tela2);
     }
 }

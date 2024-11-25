@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     android:background="#82BDED"
     tools:context=".MainActivity">
-        <!--  Teste -->
 
         <LinearLayout
             android:id="@+id/linearLayout2"
@@ -57,10 +56,7 @@
                     android:padding="@dimen/text_size_medium"
                     android:textColorHighlight="#000000"
                     android:textColorHint="#090000"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.493"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    android:textColor="@color/black"/>
 
                 <Button
                     android:id="@+id/button1"
@@ -86,13 +82,11 @@
                     android:layout_marginTop="-65dp"
                     android:layout_marginBottom="148dp"
                     android:backgroundTint="@color/cores_botoes"
+                    android:onClick="esqueci"
                     android:text="@string/Texto_de_botao_esqueci_senha"
                     android:fontFamily="@font/maven_pro"
                     android:textColor="@color/white"
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    android:textSize="16sp" />
 
                 <Button
                     android:id="@+id/button3"
@@ -119,6 +113,7 @@
                     android:layout_marginTop="-549dp"
                     android:layout_marginBottom="0dp"
                     android:text="@string/Texto_de_logo1"
+                    android:textColor="@color/black"
                     android:fontFamily="@font/maven_pro"
                     android:textAlignment="center"
                     android:textSize="48sp"

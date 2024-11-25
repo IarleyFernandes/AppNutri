@@ -13,6 +13,24 @@
         android:theme="@style/Theme.Nutri"
         tools:targetApi="31">
         <activity
+            android:name=".esqueci_senha"
+            android:exported="false" />
+        <activity
+            android:name=".esqueci_senha_2"
+            android:exported="false" />
+        <activity
+            android:name=".esqueci_senha_3"
+            android:exported="false" />
+        <activity
+            android:name=".activ_tela_avaliacao"
+            android:exported="false" />
+        <activity
+            android:name=".eventos_alimentacao"
+            android:exported="false" />
+        <activity
+            android:name=".layout_cronograma"
+            android:exported="false" />
+        <activity
             android:name=".editar_perfil"
             android:exported="false" />
         <activity
@@ -33,6 +51,7 @@
         <activity
             android:name=".SplashScreen"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

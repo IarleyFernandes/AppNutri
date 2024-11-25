@@ -42,7 +42,8 @@
             android:layout_marginEnd="100dp"
             android:text="Iarley Borges Fernandes"
             android:fontFamily="@font/maven_pro"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:textColor="@color/black"/>
 
         <ImageView
             android:layout_width="150dp"
@@ -50,21 +51,25 @@
             android:layout_marginStart="140dp"
             android:src="@drawable/_951752_1"
             android:contentDescription="logo"/>
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="59dp"
-    android:layout_marginTop="15dp"
-    android:text="@string/CPF"
-    android:fontFamily="@font/maven_pro"
-    android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="59dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/maven_pro"
+            android:text="@string/CPF"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="125dp"
             android:layout_marginTop="-33dp"
             android:text="000.000.000-00"
-            android:textSize="25sp" />
+            android:textSize="25sp"
+            android:textColor="@color/black"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -73,7 +78,8 @@
             android:layout_marginTop="20dp"
             android:fontFamily="@font/maven_pro"
             android:text="21 anos Masculino"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -82,7 +88,8 @@
             android:layout_marginTop="20dp"
             android:text="@string/telefone"
             android:fontFamily="@font/maven_pro"
-            android:textSize="25sp" />
+            android:textSize="25sp"
+            android:textColor="@color/black"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -90,6 +97,7 @@
             android:layout_marginStart="59dp"
             android:layout_marginTop="10dp"
             android:text="@string/Email"
+            android:textColor="@color/black"
             android:fontFamily="@font/maven_pro"
             android:textSize="25sp" />
 
@@ -136,7 +144,8 @@
                     android:layout_marginTop="100dp"
                     android:text="Agenda"
                     android:fontFamily="@font/maven_pro"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="130dp"
@@ -145,7 +154,8 @@
                     android:layout_marginTop="100dp"
                     android:text="Relatorios"
                     android:fontFamily="@font/maven_pro"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:textColor="@color/black"/>
             </LinearLayout>
         </RelativeLayout>
     </LinearLayout>
@@ -163,10 +173,11 @@
         <ImageView
             android:id="@+id/home"
             android:layout_width="50dp"
-            android:layout_height="55dp"
+            android:layout_height="49dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-            android:src="@drawable/botao_home_ligado" />
+            android:src="@drawable/botao_home_ligado"
+            />
 
         <ImageView
             android:id="@+id/consulta"
@@ -174,7 +185,8 @@
             android:layout_height="55dp"
             android:layout_marginStart="110dp"
             android:layout_marginTop="10dp"
-            android:src="@drawable/calendario" />
+            android:src="@drawable/calendario"
+            android:onClick="plano"/>
 
         <ImageView
             android:id="@+id/cronograma"
@@ -182,7 +194,9 @@
             android:layout_height="55dp"
             android:layout_marginStart="220dp"
             android:layout_marginTop="10dp"
-            android:src="@drawable/tempo" />
+            android:src="@drawable/tempo"
+            android:onClick="crono"
+            android:contentDescription="Cronograma"/>
 
         <ImageView
             android:id="@+id/aval"
@@ -191,7 +205,8 @@
             android:layout_marginStart="330dp"
             android:layout_marginTop="10dp"
             android:src="@drawable/estrela"
-            android:contentDescription=""/>
+            android:contentDescription="Avaliação"
+            android:onClick="aval"/>
 
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>

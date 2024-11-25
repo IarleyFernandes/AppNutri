@@ -1,7 +1,9 @@
 package com.example.nutri;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -118,12 +120,19 @@ public class landingPage extends AppCompatActivity {
                 break;
             case 2:
                 consulta.setImageResource(R.drawable.calendario);
+                Intent troca_tela = new Intent(this,eventos_alimentacao.class);
+                startActivity(troca_tela);
                 break;
             case 3:
                 cronograma.setImageResource(R.drawable.tempo);
+                Intent troca_tela2 = new Intent(this,layout_cronograma.class);
+                startActivity(troca_tela2);
+
                 break;
             case 4:
                 aval.setImageResource(R.drawable.estrela);
+                Intent troca_tela3 = new Intent(this,activ_tela_avaliacao.class);
+                startActivity(troca_tela3);
                 break;
         }
     }
@@ -135,4 +144,16 @@ public class landingPage extends AppCompatActivity {
             super.onBackPressed();
         }
 }
+    public void crono(View view){
+        Intent troca_tela = new Intent(this,layout_cronograma.class);
+        startActivity(troca_tela);
+    }
+    public void aval(View view){
+        Intent troca_tela = new Intent(this,activ_tela_avaliacao.class);
+        startActivity(troca_tela);
+    }
+    public void plano(View view){
+        Intent troca_tela = new Intent(this,eventos_alimentacao.class);
+        startActivity(troca_tela);
+    }
 }
