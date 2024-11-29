@@ -1,23 +1,106 @@
 package com.example.nutri;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
-
+import android.widget.ImageView;
+import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import com.example.nutri.R;
+import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
 
 public class eventos_alimentacao extends AppCompatActivity {
+
+    private ImageView home, consulta, cronograma, aval;
+    private Imagem imagemAtualLigada = Imagem.CONSULTA; // Imagem de consulta é a inicial
+
+    private enum Imagem {
+        HOME, CONSULTA, CRONOGRAMA, AVALIACAO
+    }
+
+    @SuppressLint("NonConstantResourceId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
+        EdgeToEdge.enable(this); // Certifique-se que o EdgeToEdge é necessário
         setContentView(R.layout.eventos_alimentacao);
-    }
-    public void voltar(View view){
-        Intent troca_tela = new Intent(this,landingPage.class);
-        startActivity(troca_tela);
-    }
 
 
+        // Inicialize os ImageViews
+        home = findViewById(R.id.home);
+        consulta = findViewById(R.id.consulta);
+        cronograma = findViewById(R.id.cronograma);
+        aval = findViewById(R.id.aval);
+
+        // Defina a imagem selecionada como ligada automaticamente ao iniciar
+        consulta.setImageResource(R.drawable.calendario_ligado); // Mudar a imagem para o estado "ligado"
+
+        // Defina os onClickListeners para as imagens
+        home.setOnClickListener(v -> alternarImagem(Imagem.HOME));
+        consulta.setOnClickListener(v -> alternarImagem(Imagem.CONSULTA));
+        cronograma.setOnClickListener(v -> alternarImagem(Imagem.CRONOGRAMA));
+        aval.setOnClickListener(v -> alternarImagem(Imagem.AVALIACAO));
+    }
+
+    private void alternarImagem(Imagem imagemSelecionada) {
+        if (imagemAtualLigada != null) {
+            desativarImagem(imagemAtualLigada);
+        }
+        ligarImagem(imagemSelecionada);
+        imagemAtualLigada = imagemSelecionada;
+    }
+
+    private void ligarImagem(Imagem imagem) {
+        switch (imagem) {
+            case HOME:
+                home.setImageResource(R.drawable.botao_home_ligado);
+                trocarTela(landingPage.class);
+                break;
+            case CONSULTA:
+                consulta.setImageResource(R.drawable.calendario_ligado); // Deixa a imagem de consulta ligada
+                // Trocar para a tela de consulta
+                break;
+            case CRONOGRAMA:
+                cronograma.setImageResource(R.drawable.tempo_ligado);
+                // Trocar para a tela de cronograma
+                trocarTela(layout_cronograma.class);
+                break;
+            case AVALIACAO:
+                aval.setImageResource(R.drawable.estrela_ligado);
+                // Trocar para a tela de avaliação
+                trocarTela(activ_tela_avaliacao.class);
+                break;
+        }
+    }
+
+    private void desativarImagem(Imagem imagem) {
+        switch (imagem) {
+            case HOME:
+                home.setImageResource(R.drawable.botao_home);
+                break;
+            case CONSULTA:
+                consulta.setImageResource(R.drawable.calendario);
+                break;
+            case CRONOGRAMA:
+                cronograma.setImageResource(R.drawable.tempo);
+                break;
+            case AVALIACAO:
+                aval.setImageResource(R.drawable.estrela);
+                break;
+        }
+    }
+
+    // Método genérico para trocar de tela
+    private void trocarTela(Class<?> activityClass) {
+        Intent intent = new Intent(this, activityClass);
+        startActivity(intent);
+    }
 }

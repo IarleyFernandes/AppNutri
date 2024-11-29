@@ -1,32 +1,39 @@
 package com.example.nutri;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
-
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-
+import com.example.nutri.R;
 import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
 
 public class landingPage extends AppCompatActivity {
 
     private ImageView home, consulta, cronograma, aval;
-    private int imagemAtualLigada = 1;  // Começa com home "ligado"
+    private Imagem imagemAtualLigada = Imagem.HOME; // Enum para controle do estado da imagem
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
 
+    private enum Imagem {
+        HOME, CONSULTA, CRONOGRAMA, AVALIACAO
+    }
+
+    @SuppressLint("NonConstantResourceId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
+        EdgeToEdge.enable(this); // Certifique-se que o EdgeToEdge é necessário
         setContentView(R.layout.activity_landing_page);
 
         // Configurar a Toolbar
@@ -36,7 +43,6 @@ public class landingPage extends AppCompatActivity {
         // Configurar o DrawerLayout e o NavigationView
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
-//teste
 
         // Configurar o botão de menu na Toolbar
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -47,26 +53,25 @@ public class landingPage extends AppCompatActivity {
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
-        // Lidar com cliques nos itens do NavigationView
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                int id = item.getItemId();
-
-                if (id == R.id.nav_home) {
-                    Toast.makeText(landingPage.this, "Home selecionado", Toast.LENGTH_SHORT).show();
-                } else if (id == R.id.nav_profile) {
-                    Toast.makeText(landingPage.this, "Perfil selecionado", Toast.LENGTH_SHORT).show();
-                } else if (id == R.id.nav_settings) {
-                    Toast.makeText(landingPage.this, "Configurações selecionadas", Toast.LENGTH_SHORT).show();
-                } else if (id == R.id.nav_logout) {
-                    Toast.makeText(landingPage.this, "Sair selecionado", Toast.LENGTH_SHORT).show();
-                }
-
-                // Fechar o menu após o clique
-                drawerLayout.closeDrawers();
-                return true;
+//        // Lidar com cliques nos itens do NavigationView
+        navigationView.setNavigationItemSelectedListener(item -> {
+            int itemId = item.getItemId();
+            if (itemId == R.id.nav_edit) {
+                mostrarMensagem("Editar selecionado");
+                trocarTela(editar_perfil.class);
+            } else if (itemId == R.id.nav_money) {
+                mostrarMensagem("Financeiro selecionado");
+            } else if (itemId == R.id.nav_notifications) {
+                mostrarMensagem("Notificações selecionadas");
+            } else if (itemId == R.id.nav_logout) {
+                mostrarMensagem("Sair selecionado");
+                trocarTela(MainActivity.class);
+                finish();
             }
+
+            // Fechar o menu após a seleção
+            drawerLayout.closeDrawer(GravityCompat.START);
+            return true;
         });
 
         // Inicialize os ImageViews
@@ -76,84 +81,87 @@ public class landingPage extends AppCompatActivity {
         aval = findViewById(R.id.aval);
 
         // Defina os onClickListeners para as imagens
-        home.setOnClickListener(v -> alternarImagem(1));
-        consulta.setOnClickListener(v -> alternarImagem(2));
-        cronograma.setOnClickListener(v -> alternarImagem(3));
-        aval.setOnClickListener(v -> alternarImagem(4));
+        home.setOnClickListener(v -> alternarImagem(Imagem.HOME));
+        consulta.setOnClickListener(v -> alternarImagem(Imagem.CONSULTA));
+        cronograma.setOnClickListener(v -> alternarImagem(Imagem.CRONOGRAMA));
+        aval.setOnClickListener(v -> alternarImagem(Imagem.AVALIACAO));
     }
 
-
-    private void alternarImagem(int imagemSelecionada) {
-        // Verifica qual imagem está ligada e a desliga
-        if (imagemAtualLigada != -1) {
+    private void alternarImagem(Imagem imagemSelecionada) {
+        if (imagemAtualLigada != null) {
             desativarImagem(imagemAtualLigada);
         }
-
-        // Liga a nova imagem e atualiza o estado
         ligarImagem(imagemSelecionada);
         imagemAtualLigada = imagemSelecionada;
     }
 
-    private void ligarImagem(int imagem) {
-        // Usa o switch para alterar a imagem selecionada para o estado "ligado"
+    private void ligarImagem(Imagem imagem) {
         switch (imagem) {
-            case 1:
+            case HOME:
                 home.setImageResource(R.drawable.botao_home_ligado);
                 break;
-            case 2:
+            case CONSULTA:
                 consulta.setImageResource(R.drawable.calendario_ligado);
+                trocarTela(eventos_alimentacao.class);
                 break;
-            case 3:
+            case CRONOGRAMA:
                 cronograma.setImageResource(R.drawable.tempo_ligado);
+                trocarTela(layout_cronograma.class);
                 break;
-            case 4:
+            case AVALIACAO:
                 aval.setImageResource(R.drawable.estrela_ligado);
+                trocarTela(activ_tela_avaliacao.class);
                 break;
         }
     }
 
-    private void desativarImagem(int imagem) {
-        // Usa o switch para retornar a imagem selecionada ao estado "desligado"
+    private void desativarImagem(Imagem imagem) {
         switch (imagem) {
-            case 1:
+            case HOME:
                 home.setImageResource(R.drawable.botao_home);
                 break;
-            case 2:
+            case CONSULTA:
                 consulta.setImageResource(R.drawable.calendario);
-                Intent troca_tela = new Intent(this,eventos_alimentacao.class);
-                startActivity(troca_tela);
                 break;
-            case 3:
+            case CRONOGRAMA:
                 cronograma.setImageResource(R.drawable.tempo);
-                Intent troca_tela2 = new Intent(this,layout_cronograma.class);
-                startActivity(troca_tela2);
-
                 break;
-            case 4:
+            case AVALIACAO:
                 aval.setImageResource(R.drawable.estrela);
-                Intent troca_tela3 = new Intent(this,activ_tela_avaliacao.class);
-                startActivity(troca_tela3);
                 break;
         }
     }
+
+    @Override
     public void onBackPressed() {
         // Fechar o menu lateral se estiver aberto ao pressionar "voltar"
-        if (drawerLayout.isDrawerOpen(navigationView)) {
-            drawerLayout.closeDrawers();
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            drawerLayout.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
         }
-}
-    public void crono(View view){
-        Intent troca_tela = new Intent(this,layout_cronograma.class);
-        startActivity(troca_tela);
     }
-    public void aval(View view){
-        Intent troca_tela = new Intent(this,activ_tela_avaliacao.class);
-        startActivity(troca_tela);
+
+    // Método genérico para trocar de tela
+    private void trocarTela(Class<?> activityClass) {
+        Intent intent = new Intent(this, activityClass);
+        startActivity(intent);
     }
-    public void plano(View view){
-        Intent troca_tela = new Intent(this,eventos_alimentacao.class);
-        startActivity(troca_tela);
+//
+//    public void abrirCronograma(View view) {
+//        trocarTela(layout_cronograma.class);
+//    }
+//
+//    public void abrirAvaliacao(View view) {
+//        trocarTela(activ_tela_avaliacao.class);
+//    }
+//
+//    public void abrirPlano(View view) {
+//        trocarTela(eventos_alimentacao.class);
+//    }
+
+    // Método para exibir mensagens
+    private void mostrarMensagem(String mensagem) {
+        Snackbar.make(drawerLayout, mensagem, Snackbar.LENGTH_SHORT).show();
     }
 }

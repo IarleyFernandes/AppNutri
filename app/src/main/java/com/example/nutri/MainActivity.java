@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
     public void checar(View view) {
-        String usuario = "olamundo@gmail.com";
+        String usuario = "admin";
         String senha = "1234";
         txtUser = findViewById(R.id.login);
         String save = txtUser.getText().toString();

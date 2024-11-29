@@ -1,20 +1,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/nav_home"
-        android:icon="@drawable/usuario"
-        android:title="@string/editar_perfil" />
+        android:id="@+id/nav_edit"
+        android:title="Editar" />
     <item
-        android:id="@+id/nav_profile"
-        android:icon="@drawable/documento"
-        android:title="@string/recibos" />
-    <item
-        android:id="@+id/nav_settings"
-        android:icon="@drawable/sino"
-        android:title="@string/notificacoes" />
+        android:id="@+id/nav_money"
+        android:title="Financeiro" />
     <item
         android:id="@+id/nav_notifications"
-        android:icon="@drawable/trancar"
-        android:title="@string/mudar_senha" />
+        android:title="Notificações" />
+
     <item android:title="" />
     <item android:title="" />
     <item android:title="" />

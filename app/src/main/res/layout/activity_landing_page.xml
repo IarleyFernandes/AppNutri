@@ -186,7 +186,7 @@
             android:layout_marginStart="110dp"
             android:layout_marginTop="10dp"
             android:src="@drawable/calendario"
-            android:onClick="plano"/>
+            />
 
         <ImageView
             android:id="@+id/cronograma"
@@ -195,7 +195,7 @@
             android:layout_marginStart="220dp"
             android:layout_marginTop="10dp"
             android:src="@drawable/tempo"
-            android:onClick="crono"
+            android:onClick="abrirCronograma"
             android:contentDescription="Cronograma"/>
 
         <ImageView
@@ -206,16 +206,16 @@
             android:layout_marginTop="10dp"
             android:src="@drawable/estrela"
             android:contentDescription="Avaliação"
-            android:onClick="aval"/>
+            android:onClick="abrirAvaliacao"/>
 
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 </androidx.constraintlayout.widget.ConstraintLayout>
     <!-- Menu lateral -->
 <com.google.android.material.navigation.NavigationView
-android:id="@+id/nav_view"
-android:layout_width="wrap_content"
-android:layout_height="match_parent"
-android:layout_gravity="start"
-app:menu="@menu/drawer_menu" />
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/drawer_menu"/>
     </androidx.drawerlayout.widget.DrawerLayout>
