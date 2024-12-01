@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Nutri</string>
     <!--  Tela de login   -->
 
@@ -111,7 +111,7 @@
 
 
 
-    <!--MONITORAMENTO_HIDRATACAO-->
+
 
 
     <!--Barra lateral-->
@@ -122,4 +122,61 @@
     <string name="notificacoes">Notificações</string>
     <string name="mudar_senha">Mudar Senha</string>
     <string name="logout">Sair</string>
+
+    <!--MONITORAMENTO_HIDRATACAO-->
+    <string name="app_name" tools:ignore="DuplicateDefinition">Hidratação</string>
+    <string name="seta_voltar" tools:ignore="DuplicateDefinition">Botão de voltar</string>
+    <string name="titulo_hidratacao">HIDRATAÇÃO</string>
+    <string name="dia_dom">DOM</string>
+    <string name="dia_seg">SEG</string>
+    <string name="dia_ter">TER</string>
+    <string name="dia_qua">QUA</string>
+    <string name="dia_qui">QUI</string>
+    <string name="dia_sex">SEX</string>
+    <string name="dia_sab">SAB</string>
+    <string name="botao_salvar">Salvar</string>
+
+    <!--ATIVIDADE FISICA-->
+    <string name="app_name2" tools:ignore="DuplicateDefinition">Atividadefísica</string>
+    <string name="titulo_atividadef">ATIVIDADE FÍSICA</string>
+
+    <!--ATIVIDADE INTESTINO-->
+    <string name="app_name3" tools:ignore="DuplicateDefinition">Intestino</string>
+    <string name="titulo_intestino">INTESTINO</string>
+
+    <!--DESCANSO-->
+    <string name="app_name4" tools:ignore="DuplicateDefinition">Descanso</string>
+    <string name="titulo_descanso">DESCANSO</string>
+
+
+    <!--TELAS DO PROFISSIONAL-->
+
+    <!--TELA DOS MEUS PACIENTES-->
+    <resources>
+        <!-- Geral -->
+        <string name="voltar" tools:ignore="DuplicateDefinition">Voltar</string>
+        <string name="meus_pacientes">Meus Pacientes</string>
+        <string name="buscar">Buscar</string>
+        <string name="filtrar_busca">Filtrar busca</string>
+        <string name="foto_paciente">Foto do paciente</string>
+
+        <!-- Pacientes -->
+        <string name="paciente_joao">João Carmélio</string>
+        <string name="paciente_rafael">Rafael Oliveira</string>
+        <string name="paciente_iarley">Iarley Borges</string>
+        <string name="paciente_pamella">Pamella Oliveira</string>
+        <string name="paciente_lucas">Lucas de Souza</string>
+        <string name="paciente_mateus">Mateus de Souza</string>
+
+        <!-- Informações dos Pacientes -->
+        <string name="particular">Particular</string>
+        <string name="convenio">Convênio</string>
+        <string name="consulta_presencial">Consulta: Presencial</string>
+        <string name="consulta_online">Consulta: Online</string>
+    </resources>
+
+
+
+
+
 </resources>
