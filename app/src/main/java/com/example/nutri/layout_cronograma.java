@@ -63,8 +63,7 @@ public class layout_cronograma extends AppCompatActivity {
                 trocarTela(landingPage.class);
                 break;
             case CONSULTA:
-                consulta.setImageResource(R.drawable.calendario_ligado);
-                trocarTela(consulta.class);
+                consulta.setImageResource(R.drawable.calendario_ligado); // Deixa a imagem de consulta ligada
                 break;
             case CRONOGRAMA:
                 cronograma.setImageResource(R.drawable.tempo_ligado);
@@ -97,20 +96,5 @@ public class layout_cronograma extends AppCompatActivity {
     private void trocarTela(Class<?> activityClass) {
         Intent intent = new Intent(this, activityClass);
         startActivity(intent);
-    }
-    public void alim(View view){
-        trocarTela(eventos_alimentacao.class);
-    }
-    public void ativ(View view){
-        trocarTela(activ_atividadef.class);
-    }
-    public void hidrat(View view){
-        trocarTela(activ_hidratacao_t.class);
-    }
-    public void intest(View view){
-        trocarTela(activ_intestino_t.class);
-    }
-    public void desc(View view){
-        trocarTela(activity_descanso.class);
     }
 }

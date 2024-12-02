@@ -13,18 +13,6 @@
         android:theme="@style/Theme.Nutri"
         tools:targetApi="31">
         <activity
-            android:name=".consulta_admin"
-            android:exported="false" />
-        <activity
-            android:name=".Agenda"
-            android:exported="false" />
-        <activity
-            android:name=".landingpage_admin"
-            android:exported="false" />
-        <activity
-            android:name=".consulta"
-            android:exported="false" />
-        <activity
             android:name=".esqueci_senha"
             android:exported="false" />
         <activity
@@ -61,33 +49,18 @@
             android:name=".Apresentacao"
             android:exported="false" />
         <activity
-            android:name=".activ_mypacientes"
-            android:exported="false" />
-        <activity
-            android:name=".activity_descanso"
-            android:exported="false" />
-        <activity
-            android:name=".activ_atividadef"
-            android:exported="false" />
-        <activity
-            android:name=".activ_hidratacao_t"
-            android:exported="false" />
-        <activity
-            android:name=".activ_intestino_t"
-            android:exported="false" />
-        <activity
             android:name=".SplashScreen"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".landingPage"
             android:exported="false"
-            android:launchMode="singleTask" />
+            android:launchMode="singleTask"/>
         <activity
             android:name=".cadastro"
             android:exported="false" />

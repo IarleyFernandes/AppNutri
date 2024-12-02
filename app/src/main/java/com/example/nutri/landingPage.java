@@ -102,7 +102,7 @@ public class landingPage extends AppCompatActivity {
                 break;
             case CONSULTA:
                 consulta.setImageResource(R.drawable.calendario_ligado);
-                trocarTela(consulta.class);
+                trocarTela(eventos_alimentacao.class);
                 break;
             case CRONOGRAMA:
                 cronograma.setImageResource(R.drawable.tempo_ligado);
@@ -122,7 +122,6 @@ public class landingPage extends AppCompatActivity {
                 break;
             case CONSULTA:
                 consulta.setImageResource(R.drawable.calendario);
-                trocarTela(consulta.class);
                 break;
             case CRONOGRAMA:
                 cronograma.setImageResource(R.drawable.tempo);

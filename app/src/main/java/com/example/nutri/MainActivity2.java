@@ -22,7 +22,7 @@ public class MainActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
     }
     public void checar_admin(View view) {
-        String usuario = "admin";
+        String usuario = "olamundo@gmail.com";
         String senha = "1234";
         txtUser = findViewById(R.id.login2);
         String save = txtUser.getText().toString();
@@ -30,9 +30,9 @@ public class MainActivity2 extends AppCompatActivity {
         String save2 = txtSenha.getText().toString();
         if ((save.equals(usuario)) && save2.equals(senha)) {
             Toast.makeText(this, "Login efetuado com Sucesso", Toast.LENGTH_SHORT).show();
-            Intent troca_tela = new Intent(this,landingpage_admin.class);
-            startActivity(troca_tela);
-            finish();
+//            Intent troca_tela = new Intent(this,landingPage.class);
+//            startActivity(troca_tela);
+//            finish();
 
 
         } else {
