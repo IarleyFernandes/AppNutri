@@ -51,6 +51,7 @@ public class activ_tela_avaliacao extends AppCompatActivity {
                 break;
             case CONSULTA:
                 consulta.setImageResource(R.drawable.calendario_ligado);
+                trocarTela(consulta.class);
                 break;
             case CRONOGRAMA:
                 cronograma.setImageResource(R.drawable.tempo_ligado);
