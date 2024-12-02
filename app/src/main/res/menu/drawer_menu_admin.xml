@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_edit"
+        android:title="Editar Perfil" />
+    <item
+        android:id="@+id/nav_money"
+        android:title="Pagamentos" />
+    <item
+        android:id="@+id/nav_notifications"
+        android:title="Meus Pacientes" />
+    <item android:title="Relatorios" />
+    <item android:title="Agenda" />
+    <item android:title="Notificações" />
+    <item android:title="Mudar senha" />
+    <item android:title="" />
+    <item android:title="" />
+    <item android:title="" />
+    <item android:title="" />
+    <item android:title="" />
+    <item android:title="" />
+    <item android:title="" />
+    <item
+        android:id="@+id/nav_logout"
+        android:icon="@drawable/simbolo_de_logout"
+        android:title="@string/logout" />
+</menu>
